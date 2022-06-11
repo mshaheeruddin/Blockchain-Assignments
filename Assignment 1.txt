@@ -1,0 +1,37 @@
+What is blockchain technology and why might it be a catalyst for change?
+Historically, we engaged in trade where we have to take services from middleman. Blockchain technology has eliminated this need. So, Blockchain technology is a system of recording data with a Single Universal Ledger.Ã‚Â  It is a decentralized system with every participants or nodes having power to validate a particular transaction with some agreed upon consensus mechanism usually a mathematical proof.
+
+
+As it uses chaining concept, decentralized distribution mechanism, and cryptographic hashing algorithms, which acts as a signature, like SHA-1,2 or 3, and so it can bring a revolution in fields where security is of paramount importance. One such example is finance and we have an example of Bitcoins Currency where the system is based purely on Blockchain technology.
+
+
+
+
+How is a blockchain system different from a centralized or a legacy distributed system?
+
+Unlike centralized system where there is a middleman governing and owning the system of transactions, Blockchain system has nodes (participants) and they have the power to verify transactions happening using some agreed upon mechanism. They all are connected in a form of chain and so when some new block is inserted, the whole chain must agree to allow this insertion in this chain.
+Blockchain is not same as legacy distributed system. For example, blockchain is not sameÃ‚Â as distributed ledger system rather it is the specific type of distributed ledger system. Distributed ledger system may not require data structures of Blocks which blockchain have rather it is just a type of database spread across multiple sites, region, or participants.
+
+
+
+Define any three use-cases of blockchain technology.
+
+Economically Viable Energy:
+
+Eliminating the centralization of energy sector. For example, Gas company which supply gas to houses and charges money. We can eliminate this centralization and introduce the system of micro-grids which will enable users to use energy as much as they need and then they can sell remaining quota to other users who needs it and as a result we can use energy viably. So, blockchain can manage this system efficiently.
+
+
+Saving the suicidal farmers:
+
+Most of the time farmers cannot do rewarding farming (high yield) because they donÃ¢â‚¬â„¢t have expensive equipment required for this. They also donÃ¢â‚¬â„¢t own a farming land or even if they do there is an aura of uncertainty. Using fractional-ownership concept we can distribute an equipment, say a harvester among different farmers and each one can use it in their assigned time. This fractional ownership will also reduce the original cost of equipment enabling poor farmers to use it to enhance their yield. All the complexities of financial transactions, assigned-time, usage time etc. can be managed efficiently by Blockchain.
+
+
+Helping data analysts:
+
+Analyzing Big data requires a lot of computational power and storage facility which an ordinary data analyst may not possess. They end up using centralized cloud facilities. We can create a system where anyone can share/sell their memory (which is not in use) to people like data analysts and others which needs them. So, computer users can lend their memory for some amount of time. All the data needed to run this system efficiently like cost, time-used, who used it, when did it was used can be managed by blockchain technology.
+
+
+
+How to move value peer-to-peer on the internet without any trusted central intermediary? Can you spot flaws in the protocol that we discussed in the class and improve it?
+
+By Using some agreed upon mechanism like mathematical puzzle which everyone needs to solve in order to include block of that transaction in the chain. This is usually done in proof of work mechanism. By Broadcasting transaction, avoiding overspending, making sure that only signed transactions are valid. By Broadcasting transactions, we are compromising on our identity.

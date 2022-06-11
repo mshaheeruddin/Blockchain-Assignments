@@ -1,0 +1,52 @@
+Study Questions:
+
+Summarize the bitcoin paper. [500 - 700 words]Ã‚Â 
+
+How do economic incentives work within blockchain technology? What are the incentives of consensus protocols and mining?
+What is the double-spending problem and how it is addressed by blockchain technology?
+
+As many design featuresÃ¢â‚¬â€ public-key cryptography, hash functions, append-only timestamped logs, digital cash, and proof-of-workÃ¢â‚¬â€ pre-date Bitcoin, what was the novel innovation of Santoshi Nakamoto?
+
+Why is the difficulty of the proof of work in Bitcoin set to ten minutes? What would go wrong if it was changed to 12 seconds?
+
+Answer:
+
+1.
+
+Transactions between two person with central entity is costly. Firstly, transaction getting reversed is a possibility and so a central entity is needed to resolve this in turn will cause cost to exceed the transaction itself. Also, privacy of customers are at stake since they are required by central entity. The solution is to replace trust with cryptographic proof having timestamped transactions proving that current transaction is valid. Security of system depends on majority of honest nodes having most of the CPU power.
+
+To make sure that movement of transactions are secure, Satoshi introduces process of asymmetric cryptography to digitally sign the transaction, but then the issue of double-spending (spending same amount twice) arises. Nakamoto proposes two solutions two this. Firstly, all transactions have to be recorded publicly so that everyone can verify previously signed transactions. Second is that if there are two opposing transactions (trying to use same coin) then earliest one will be considered legitimate and so now how to ensure their correct order and how to make majority nodes must agree on this single history of transactions?
+
+Satoshi proposes a solution by introducing the idea of time-stamped servers. The collection of transactions forms a block. Then the hash is calculated based on the previous blockÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s hash (or timestamp) and current block of transactions forming a chain of blocks. This hash will then be published widely on resources like newspaper so that everyone can check when they were published. Anyone can check that the current blockÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s hash can be computed from previous blocks hash.
+
+In order to implement this distributed timestamp server, Satoshi proposes proof-of-work mechanism. The idea is that nodes compete to iteratively find a special number nonce to compute special hash like starting with some number of zeros. The majority vote to add next block is based on those having more CPU power rather than having more IP addresses as it is easy to create multiple processes in one system rather to have multiple CPUs which is costly and also shows that nodes with more CPU power has shown interest by investing capital and so they can be relied upon. Finally, difficulty is adjusted so that avg number of blocks found per hour remains relatively constant.
+
+Now, how each transaction is added to the chain when Nodes listen to transactions being added, gathering them into a block and do PoW process. In return, all other nodes will verify if that hash is valid. Each blockÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s hash is based on its previous hash indicating that new block validated its previous block. In case of two blocks being hashed at the same time, nodes are to wait for some time and see which chain becomes longer and then accept it as their chain. If transaction is broadcasted to enough nodes, it can be added to blockchain and those who did not receive it can see it later.
+
+To attract people to bitcoin network, Satoshi proposed that the nodes (miners) will get reward (block reward) each time they add a new block to the chain and transaction fee which they will get from each transaction (some of it) and this transaction fee must replace block reward at some point in time. This incentive system will cause fraud useless in terms of profit. Fraudster will find it less profitable (as he is risking validity of his wealth and undermining the network) than to mine new coins which are much more profitable, thanks to incentive scheme.
+
+As new blocks are added to blockchain after every 10 minutes, this can cause disk space issues. Satoshi proposes to solve it by deleting old transactions. This is achieved by storing transaction in horizontal tree structure called Merkel tree instead of linear structure. Every transaction has its own hash which together makes up main hash at the root of tree. Thus, without changing main hash, individual transactions can be removed.
+
+He also introduces SPV to verify if payments are accepted by nodes without needing to download complete block rather it can be verified through blocks portion i.e., its header, transaction to verify and its Merkel hash (root). This mean it will be easier to fool the network in case he controls majority nodes, so its solution is that nodes should send constant alerts to each other so everyone can verify the fraudulent block.
+
+Bitcoin can be split and then combined to exchange it for other bitcoins. Hence, one transaction can send bitcoins (as inputs) to different addresses. 
+
+Concerning Privacy, identities are hidden while transactions are made public. This is achieved by keeping public key anonymous and user can increase the level of anonymity by having many public keys.
+
+2.
+
+In order to attract people to join the bitcoin network and to support miners for their services, Bitcoin offers two types of incentives:
+
+Block Reward: This reward is given to the miner who successfully mines a block.Ã‚Â This is appended as a special transaction (requiring no verification) at the top of the block.
+Transaction fee: This is the amount given to miners if they accept a transaction to be included in a block. This is given from the transaction itself. The likelihood of miner opting a transaction depends on the amount of fee the payer allocated. The more the fee the more chance of it getting accepted.Ã‚Â The aim of bitcoin is that incentives should be completely based on the transaction fees.
+Ã‚Â  3.
+
+In double-spending, a node may spend a coin again which they have previously spent. It is nearly impossible as Bitcoins makes it necessary to record every single transactions publicly and peer-to-peer network system and time based blocks(ordered) means that each node can verify the transaction very easily. Ãƒâ€šÃ‚Â An attempt to double-spend is naturally rejected as everyone has the record. Furthermore, Bitcoin has designed it protocols in such a way that double spending cannot be done. For example: One can only double spend only if he tries to change the block containing that transaction which mean he has to remine the entire block and the block after it which is computationally expensive. Ãƒâ€šÃ‚Â 
+
+4.
+
+The novel innovation of Satoshi Nakamoto is the idea of making fraudulent activity non-profitable by introducing incentive scheme. This really benefitted the miners financially and this helped people taking interest in this network. Most importantly, it made fraud worthless. The incentives are too high in value that it is stupid (and computationally near impossible) for attacker to mine a long chain for his motives. Even if he manages to form a longest chain by getting enough computational power, the incentives given to legally mine greatly outweigh the gains he get by undermining the network and secondly this wealth will be at risk every time. This idea greatly secured Bitcoin network and so till to date no such attacks has been reported. 
+
+5.
+
+Ten minutes is chosen as a tradeoff between the time it takes to inform all nodes about block mining and amount of work wasted due to two blocks mined concurrently. 10 minutes difficulty prevents wastage of computational work done. For example: If A mines a block, then it will take some time for other nodes to know about this mining. If difficulty is set to 12 seconds, then before every nodes approving this block, suppose B also mined a block, this causes chain to split in two and now only one chain has to be chosen. If other nodes opt for As block, then Bs block will be orphaned and Bs computational work will be wasted. So, 10 minute time is generally optimal for other nodes to verify the first block mined preventing wastage of work.

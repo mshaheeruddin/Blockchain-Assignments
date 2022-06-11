@@ -1,0 +1,85 @@
+Study Questions:
+
+Describe the pros and cons of DeFi.
+
+What makes NFT different from regular tokens? and why would you use an NFT?
+
+Why would we use an off-net chain?
+
+Give examples of systems that are decentralized/centralized in all manner.
+
+What do you think will be the next evolution in blockchain technology?
+
+What is the difference between PoW and PoS consensus mechanisms? can you suggest any other consensus protocol?
+
+
+
+ANSWERS:
+
+1)
+Pros:
+
+Permissionless:
+Since DeFi is built on public blockchain, it provides easy to enter system for traders and investors and they are not required to specify access rules such as exposing their private and sensitive information and start engaging in transactions.
+
+Trustless:
+
+While in decentralized system you have to trust some intermediary like Bank, in DeFi systems trust is distributed among nodes or participants. They must reach consensus to verify a transaction. This improves security as system is immutable (unchangeable) once consensus is reached.
+
+Cons:
+
+Vulnerability of smart contracts:
+
+DeFi is governed by piece of code called Smart Contracts used to regulate user funds directly or indirectly. This code may have bugs and loopholes which a hacker can detect since it is transparent i.e., open for anyone to see. This may result in money being stolen and prove disastrous specially when huge sum is being pushed over the network.
+
+Oracles:
+External data is required to execute Smart Contracts having real-time feature (For example: Give Farmer X money if temperature > 40 C). We use oracles for such purpose which provides us with external data. The security of DeFi products rely heavily on the validity and correctness of Oracles which needs to be evaluated. Often times, oracles fails in providing reliable data.
+
+
+2)
+
+
+Regular tokens like Bitcoins store value while NFT stores data like an artwork or a trust deed.
+Regular tokens are equal in value and non-unique for example 1 BTC is 1 BTC anywhere in the world while NFT represent something which is unique and irreplaceable as each have Digital signature for example, a unique painting.
+One would use NFTs if wants to invest in unique collectibles like artworks, signed celebrity tweet and more. To monetize hisÃƒâ€šÃ‚Â wares, he may use NFTs.
+
+Ãƒâ€šÃ‚Â 
+
+3)
+
+
+To solve the issue of scalability of cryptocurrencies so if we scale it properly, we can have millions to billion transactions per second which would be way higher than the current 7 TPS. This will also reduce the transaction fee charged, speed up the processing times and reduce the energy costs associated with mining of bitcoins blockchain.
+
+
+
+4)
+
+
+CENTRALIZED SYSTEMS:
+
+1- Websites which is based on a client-server architecture where the server acts as central authority.
+
+2-IBM Sysplex and DEC clusters.
+
+3- Single player games such as GTA 5, NFS where the central authority is a personal computer.
+
+
+DECENTRALIZED SYSTEMS:
+1- Bitcoin is based on decentralized Blockchain technology.
+
+2- Wikipedia in the sense that everyone can edit the article.
+
+3- In networking: peer to peer technology For e.g Decentralized network 42.
+
+Ãƒâ€šÃ‚Â 
+
+5)
+
+
+Web3 is the the next big thing in next Blockchain evolution. It is based on the concept of distributing power evenly and decentralizing it from the control of big tech platforms. It will exist on the blockchain system. Here everyone will be in power. For example: PoS mechanism will be used to allow people verify if certain post is to be deleted due to different concerns. It can also bring great change in cross-border payment system which is evident by the IBMs Blockchain World Wire which uses Steller Protocol. Healthcare management, real-estate and Legal System are also hotspots for such evolution.
+
+
+6)
+
+
+In PoW miners use computation power to find out the previous cryptographic hash to include the new block in this chain. Whereas in PoS, no mining is done as all cryptocurrencies in this network are already created and verification depends upon the amount of stake the staker is willing to put forth, and one with largest stake decides to add the new block and hence no computation power is needed which reduces energy consumption. In PoW, everyone is involved in mining process while in PoS not the entire network is involved in verifying process rather only stakers are involved which improves scalability. Other consensus protocols are also useful and efficient such as Proof-of-Elapsed Time which solves the computing problem of random leader electionÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â by using a fair lottery system. It ensures a randomly selected waiting time for all participating nodes and that the winning node genuinely completed that time. It is better than PoW as it selects nodes randomly instead of allowing all nodes to mine which reduces energy consumption.

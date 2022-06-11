@@ -1,0 +1,11 @@
+Class Activity:
+
+TASK TO CREATE METAMASK ACCOUNT, GET ETHERS FROM TEST NET FAUCET and EXCHANGE ETHERS.
+
+
+Review the resources and develop a program on any programming language to answer the question.
+
+Edit the sheet in suggestion mode only. Direct edit will be marked 0. The source code must be committed in the repository in a folder named as {name-erp}
+
+https://docs.google.com/document/d/1CuDu1H68-HVMwKXM3AzUy5bmWrgjn3g7-VdONclwHgw/edit?usp=sharing
+

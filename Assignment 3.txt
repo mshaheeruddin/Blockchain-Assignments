@@ -1,0 +1,39 @@
+Study Questions:
+
+What is the difference between transaction time and block time?
+
+what is mempool and how does it work ? how can an individual get his transaction accepted in the bitcoin-blockchain as soon as possible?
+
+Explain 3 attacks on a blockchain system? (we have studied two in the class 51% and Sybil)
+
+Explain Byzantine Fault Tolerance based on Byzantine General Problem.
+
+Why would we use Elliptic Curve over RSA?
+
+What is the benefit of using the Merkle Tree data structure for storing transactions in the block?
+
+
+ANSWERS:
+
+1.Simply put Block time is theÃ‚Â time it takes to form/mine a new block by the network(nodes) while Transaction time is the time it takes to record or confirm a certain transaction (that you did) on the block. Ã‚Â The lesser the transaction time, the faster the transaction speed which means that it is not fixed and it may vary (may take weeks in certain situation) while Block time is fixed, for example, (Bitcoin Block time is 10 minutes (avg) which means on Bitcoin network every new block will be committed after every 10 minutes) while for Ethereum network it is between 10s to 19s.Ã‚Â 
+2.
+
+Mempool or memory pool is a storage area for collection of individual transactions which are verified by full nodes, but they are not yet confirmed or collected together (sequentially) to be appended as a block to blockchain. Once nodes on the network verifies the transactions (i.e., checking if digital signature is valid, or output doesnÃ¢â‚¬â„¢t exceed the input and there is no double spending), these transactions are added to mempool and from here the miners come into play. Mempool is very important for miners to make profit as they are the one who confirm the selected transactions and create a block out of them. Ã‚Â 
+Individuals have to offer higher transaction fee to miner as miners sort the transactions according to the fee rate which is (Transaction fee/ Transaction size) and he should try not to make transaction size too big as it may cause his transaction to depreciate in priority list of the miner.Ã‚Â 
+3.
+Eclipse attack:
+In this attack the attacker creates such an environment around the target node for target node everything seems normal, but in reality, his communication with other peers is hijacked. This is achieved when the attacker ensures that the target node is connected only to the malicious peers which he created for some malicious purpose. Attacker do this by flooding his IP addresses which the target nodes ends up connecting when he restarts his software. When only malicious peers are connected to the target node, the attacker ensures that the target node is unable to get a block through consensus mechanism and it can further control his computational power. Now, the target node is controlled by the attacker as he can fed incorrect data to please his motives.
+Sybil attack:
+In sybill attack the attacker creates many false identities and influencing other full nodes in the network. The attacker becomes the majority of the nodes and take the illicit role and can control everything in the network. He can do so by having too many different devices or having once device with multiple processes running appearing different to other nodes. Attacker can refuse to verify a block. There is a key difference between sybil and Ã‚Â eclipse as in eclipse attacker tends to attack only one specific node while in sybil the target is whole network.
+51% ATTACK:
+If attacker in sybill attack succeeds in creating too many identities, he can transition to what is called 51% attack. In 51% attack, similar thing happen that is a participant can gather enough computational resources to become 2/3 of the network and then he can control the ledger and can manipulate the transactions in it by reversing it or approving false signature transactions etc.
+
+4.
+Byzantine Fault Tolerance (BFT) is the solution to Byzantine General Problem. First let us see what Byzantine General Problem is. It is based on byzantine generals (each of them commanding his own army) who must reach an agreement on whether to attack or retreat during a battle. If one of them is a traitor, he can somehow affect the messages being exchanged and change it as per his motives than the generals may get confused and hence may end up loosing the battle. So, the crux is that they must reach an agreement in order to win the battle. The same dilemma can happen in blockchain system where each node is a General and they may act maliciously and refuse to reach agreement with other nodes. This will disrupt the consensus mechanism which can lead to system failure and network disruption. BFT is a system which will ensure that there is a consensus even if there is a malicious nodes. BFT ensures rigorous system of sending of acknowledgments between nodes. It is related to consensus mechanism like Proof-of-work, Proof-of-stake etc., which ensures that consensus is reached.
+
+5.
+RSA encryption is based on the idea that multiplying two numbers (prime) is easier and faster than factorizing, that number to know what two numbers were used to multiply it in the first place, which is slower and difficult. But this is proved to be wrong as factorization is relatively very famous method, and certain new technologies like quantum computers and other algorithms like Quadratic Sieve were created for solving this complex factorization and these algorithms has been very successful. Due to this success, the size of the prime number should also increase which will put a burden on limited computational resources. Ã‚Â Elliptic Curve Cryptography (ECC) is based on very complex math. It has a curve which has very strange properties such as its symmetry and an intersection property i.e. if you intersect two points on a curve you will end up getting a corresponding third point. The keys are then generated from this curve through point multiplication and the curve is unfathomably large. Other benefit of using it is that we can generate way more smaller keys from ECC than other strategies, key generation is also faster which means in blockchain system we can have fast signatures generation.
+
+
+6. Merkle tree data structure is based on tree data structure (as name suggest). The tree has branches of hashes of individual transactions. These individual branches or nodes pairs together to form root node called merkle node which is the ultimate final hash of the block. Benefits are:Ã‚Â 
+It is easy to verify validity and integrity of block if there is an issue in one node/ transaction. We donÃ¢â‚¬â„¢t have to go over every node rather we may want only 5 nodes to verify if that node is problematic. Also, if there is an issue in one node than every corresponding node/hash will change giving us improved security. It is also easier to store and is not memory intensive since it is not the data rather the tree of its hashes which is relatively easier to store and doesnÃ¢â‚¬â„¢t require a lot of storage. Ã‚Â  Ã‚Â  Ã‚Â 
