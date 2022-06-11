@@ -1,0 +1,95 @@
+Study Questions:
+
+How is PoS is different from PoW?
+
+Explain Uncle blocks in Ethereum and how uncle rate isÂ affected by block time?
+
+Explain regulatory and legal concerns over cryptocurrency.
+
+Explain the difference between rollup and sidechain.Â 
+Why Ethereum is better from bitcoin in terms of incentive and how that support the community?
+----------------------------------------------------------------------------------------------------------
+
+pragma solidity ^0.4.24;
+
+contract assignmentTwo {
+
+uint public studentNumber;
+
+address public student;
+
+constructor() public {
+
+student = msg.sender;
+
+}
+
+function setStudentNumber(uint _studentNumber) public {
+
+studentNumber = _studentNumber; }
+
+}
+
+----------------------------------------------------------------------------------------------------------
+
+For this assignment, you are required to:
+
+1) Add a new public Unsigned Integer variable named `GasUsed`
+
+2) Add a function as a setter for the `GasUsed` variable
+
+3) Set your student number in the contract using `setStudentNumber(uint _studentNumber)` function
+
+4) Set the gas used by step 3 to `GasUsed` using the function in step 2.
+
+
+
+Answers:
+
+
+How is PoS different from PoW?
+
+First difference is how is block validated by a validator.Ã‚Â In PoW, nodes compete with each other to become a validator or 'miner' of the next block.Ã‚Â First one to compute cryptographic hash function for a block becomes miner.Ã‚Â In PoS, validator is selected based on the amount he staked or locked into the network.Ã‚Â The greater the amount the more chances of him becoming validator.
+This means PoW uses high computational power since its finding nonce using brute force strategy while PoS isÃ‚Â energy efficient since its doesn't depend on this power. That is the reason validation process is called forgingÃ‚Â not mining. If we compare scalability then scalability is big issue in PoW as it can handle 7 or 10 Tx/s which isÃ‚Â very low compared to fiat-based system e.g VISA. PoS doesnÃ¢â‚¬â„¢t improve scalability but opens up possibility toÃ‚Â considerably increase its tx/s by using the concept called sharding . PoS is also more secure as staker has lotÃ‚Â to lose as in case of 51% attack, it means losing lot of coins staked. Also, in PoW specialized hardware is usedÃ‚Â for mining while PoS only need only an amount to stake and devices with reliable internet connection.
+PoW is battle hardened as it is tested while PoS is still in infancy.
+
+Explain Uncle blocks in Ethereum and how uncle rate is affected by block time?
+
+Literally child block of an ancestor that is not itself an ancestor. Uncle block is just like orphan blocks but with parents. Unlike bitcoin, Ethereum doesnÃ¢â‚¬â„¢t reject these and waste mining efforts but it recognizes it and allowsÃ‚Â uncle block to form its own separate chain and it rewards them which attracts more participants, improving security.Ã‚Â Uncle rate is the rate at which these uncle blocks are being produced by network.Ã‚Â Uncle blocks are produced as a result of network delays i.e., time lag during block confirmationÃ‚Â by nodes (block time). Not every node will hear the block confirmation at the same time and thoseÃ‚Â hearing in the end will continue to mine these uncle blocks. Since uncle rate is the aspect of network latency,Ã‚Â the lower the block time, the higher the uncle rate. Implementation of Uncle blocks made it possible to scaleÃ‚Â Ethereum blockchain.
+
+Explain regulatory and legal concerns over cryptocurrency.
+
+
+There is no effective legal framework available for cryptocurrencies specially
+in 3rd world countries. Decentralized and autonomous nature of cryptocurrenciesÃ‚Â 
+have attracted illegal activities such as money laundering, tax evasion
+(since it is not subjected to any tax laws) and terrorist fundingsÃ‚Â 
+which results in countries banning cryptocurrencies.Ã‚Â 
+No laws are there to define it as legal tender.Ã‚Â 
+There is no proper jurisdiction defined in case if there is a breach inÃ‚Â 
+terms of smart contract set by two nodes residing in two different countries.Ã‚Â 
+Which countryÃ¢â‚¬â„¢s law would be applicable? How can victim generate legal evidenceÃ‚Â 
+to recover its damages in case of hacking or stealing since its difficult to figureÃ‚Â 
+out the preparator due to his anonymity. It has been used for payments in dark web toÃ‚Â 
+fund terrorist activities. In case of smart contracts, there are numerous ambiguousÃ‚Â 
+outcomes that are possible. If these outcomes (which are not defined) emerge who wouldÃ‚Â 
+explain it?Ã‚Â (Usually, judges do this but again there is no proper legal framework).
+
+
+Explain the difference between rollup and sidechain.
+
+Rollups stores final transaction data (minimum amount to locally validate the Tx) on main chain (layer 1) whileÃ‚Â it does transaction processing off-chain. Whereas sidechain computes and store transaction data onÃ‚Â separate chain (layer2). Sidechain is completely separate in a sense that it has its own chain with ownÃ‚Â security, consensus mechanism and business logic while rollups depends on main chain also.Ã‚Â This means in sidechains; we are losing trusted Ethereum security and trusting sidechainÃ¢â‚¬â„¢s own securityÃ‚Â which is not as effective as EthereumÃ¢â‚¬â„¢s so it is in this sense, less secure. Ã‚Â While in rollups by puttingÃ‚Â final data on chain, anyone on main chain can verify it increasing security.Ã‚Â Unlike sidechain, its possible to run an EVM inside rollup layer which means any transactionÃ‚Â possible in Ethereum main chain is also possible here.Ã‚Â This means we can move existing Ethereum apps Ã‚Â to rollups without any additional work.
+
+Why Ethereum is better from bitcoin in terms of incentive and how that support the community?
+
+In bitcoin network when two blocks are mined at similar time, the one thatÃ‚Â 
+was mined somewhat late becomes orphan block and hence is discarded wasting energyÃ‚Â 
+cost bared by this miner. Ethereum incentivized these blocks and named them UncleÃ‚Â 
+blocks and they receive partial block reward for their efforts. Ã‚Â 
+In Ethereum Miners are paid fees for security, validation, execution of smart contract,Ã‚Â 
+along with creation of blocks. In Ethereum miners also have the ability to determine block size as they can determine gasÃ‚Â limit to some extent and set them which is most suitable for them.Ã‚Â 
+For example: lower gas limit with higher gas fee means more immediate income for miners.
+
+CODE(SUBMITTED ON GITHUB)
+Branch name: mshaheeruddin-assignment10
+File name: assignmentTwo.sol
