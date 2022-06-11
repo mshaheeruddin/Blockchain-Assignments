@@ -1,0 +1,54 @@
+The paper is aimed towards comparing different consensus protocols with repect to their suitable use cases.
+For this, they represents a systematic literature reviews of diffrent by accompanying a survey of blockchain technologies
+and their current utilization in different application domains in the IT industry by describing some
+previous and current consensus protocols of blockchain.
+
+The paper starts with breif introduction to Blockchain basics and then transition directly
+to Proof of Work mechanism. It argues that PoW is energy inefficient due to its
+computational method. They argue that despite the enhanced versions of PoW being introduced,
+there are other consensus protocols such as PoS and DPoS which are better suited to different uses cases.
+Authors argue that they all are not perfect as they face different issues like 51% attack, Forking problem.
+Later they introduce a concept of Block Maturity Standard which is sidechain/offchain methodology to solve these
+problems.
+
+The basic aim of this paper is to compare different protocols in blockchain and according to them there are 
+around 41 consensus mechanism. 
+
+In the next section, they argue that previous studies about similar aim were not perfect as they have not described
+how they come to the conclusion i.e. the data analysis criteria. They make the bold claim
+that PoW is not the best approach after their study.
+
+Next, paper define the research methodology adopted to gather all the paper pertaining to consensus 
+protocols.
+They implemented systematic mapping process to gather data consisting of processes such as 
+Analyzing Research scope
+Finding relevent Key Words using abstract
+After that, Research objectives and Research questions are mentioned. Through strategy of
+search string strategy they gathered around 164,940 and reduced the number to 16 after implementing 
+different exlusion and inclusion criteria.
+
+They then presented the results of their research by introducing different consensus protocols 
+Proof of Work
+Proof of Stake
+Delegated Proof Of Stake
+Proof of Elapsed Time
+Zero Knowledge Proof
+Proof of Luck
+Proof of Activity
+Proof of Space
+Proof of Vote
+Proof of Burn
+Proof of Importance 
+Proof of Trust
+
+The paper gives no in depth explanation of these protocols.
+
+The whole aim was to compare them with PoW mechanism and find a property which can mitigate the
+energy inefficient part of PoW.
+They argue that there is nothing like *best protocol* rather it depends on the use case.
+Furthermore, if some consensus protocol has no weaknesses that means it has not yet been implemented.
+
+Finally, in conclusion, they give the verdict that PoW is not the best 
+consensus mechanism rather proof of stake or delegated proof of stake is the best choice. 
+Intersetingly paper did not give any explanations as to why this is the case.
+
